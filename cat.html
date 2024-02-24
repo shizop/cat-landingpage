@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>😸 Cats</title>
+    <style>
+      h1 {
+        text-align: center;
+        font-size: 40px;
+      }
+
+      hr {
+        border: 1px solid #fffafa;
+      }
+
+      h2 {
+        text-align: center;
+        font-size: 28px;
+        border: 2px solid #ffc0d0;
+        border-radius: 10px;
+        padding: 15px;
+      }
+
+      img {
+        display: block;
+        margin: 0 auto;
+        max-width: 100%;
+        border-radius: 10px;
+      }
+
+      p {
+        font-size: 20px;
+      }
+
+      .wiki {
+        text-decoration: none;
+        color: #57595f;
+      }
+
+      button {
+        display: block;
+        margin: 0 auto;
+        background: #ffc0d0;
+        color: #fffafa;
+        font-size: 20px;
+        line-height: 22px;
+        padding: 16px 24px;
+        border: 1px solid #ffc090;
+        border-radius: 25px;
+        transition: all 200ms ease;
+        box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.1);
+        text-shadow: 5px 6px 9px rgba(78, 83, 83, 0.3);
+      }
+
+      button:hover {
+        cursor: pointer;
+        background: #efdfbf;
+        color: #fffafa;
+        border: 1px solid #efdfbf;
+      }
+
+      .container {
+        max-width: 50%;
+        margin: 0 auto;
+        padding: 60px;
+        background: linear-gradient(
+          0deg,
+          rgb(247, 247, 247) 23.8%,
+          rgb(252, 221, 221) 92%
+        );
+      }
+
+      .footer {
+        text-align: center;
+        font-size: 12px;
+        padding: 25px;
+      }
+
+      .footer-platform {
+        color: #57595f;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>I love Cats</h1>
+      <hr />
+
+      <h2>Especially Birmans</h2>
+      <img
+        src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/104/063/original/GettyImages-623368786-f66c97ad6d2d494287b448415f4340a8.jpg?1700021739"
+      />
+      <p>
+        The <b>Birman</b>, also called the <em>"Sacred Cat of Burma"</em>, is a
+        domestic cat breed. The Birman is a long-haired, colour-pointed cat
+        distinguished by a silky coat, deep blue eyes, and contrasting white
+        "gloves" on each paw. The breed name is derived from Birmanie, the
+        French form of Burma.
+      </p>
+      <a href="https://en.wikipedia.org/wiki/Birman" class="wiki" target="blank"
+        >Wikipedia</a
+      ><br />
+      <button>Feed 1 now</button>
+      <div class="footer">
+        <span class="footer-platform">Written by</span> Syaibatul
+      </div>
+    </div>
+    <script>
+      function feed() {
+        let name = prompt("What is your name?");
+        name = name.charAt(0).toUpperCase() + name.slice(1);
+        let bagOfFood = prompt("How many bags are you feeding?");
+        if (bagOfFood > 0) {
+          alert(`Thank you ${name}! The cats are very happy😸`);
+        } else {
+          alert("The cats are sad😿");
+        }
+      }
+      let button = document.querySelector("button");
+      button.addEventListener("click", feed);
+    </script>
+  </body>
+</html>
